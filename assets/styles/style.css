@@ -1,0 +1,579 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+@media screen and (min-width: 769px) {
+  header {
+    width: 90%;
+    margin: 0 auto;
+    height: 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .logo {
+    text-decoration: none;
+    margin-left: 20px;
+  }
+  header .logo img {
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 45px;
+    height: 30px;
+  }
+  header .covid {
+    text-decoration: none;
+    color: #243941;
+    font-weight: bold;
+  }
+  header .covid span {
+    color: #D33E49;
+  }
+  header .menuList {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: auto;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    list-style-type: none;
+  }
+  header .menuList li a {
+    text-decoration: none;
+    color: #243941;
+    font-weight: bold;
+  }
+  header .menuList li a:hover {
+    color: #D33E49;
+    -webkit-text-decoration-line: underline;
+            text-decoration-line: underline;
+    text-underline-position: under;
+    -webkit-text-decoration-style: wavy;
+            text-decoration-style: wavy;
+    -webkit-text-decoration-color: #D33E49;
+            text-decoration-color: #D33E49;
+    text-decoration-skip-ink: none;
+  }
+  header .menuList li .pinkContact {
+    color: #D33E49;
+    border: #D33E49 solid 2px;
+    padding: 5px 20px;
+    border-radius: 20px;
+    -webkit-transition: color .2s ease-in-out;
+    transition: color .2s ease-in-out;
+  }
+  header .menuList li .pinkContact:hover {
+    color: #ffffff;
+    background-color: #D33E49;
+  }
+  header .menuList li .pinkContact i {
+    margin-left: 5px;
+    -Webkit-text-fill-color: transparent;
+    -Webkit-text-stroke-width: 1px;
+  }
+  header .menu-btn {
+    display: none;
+  }
+  .sideMenu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    width: 100%;
+    height: 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .logo {
+    text-decoration: none;
+    margin-left: 20px;
+  }
+  header .logo img {
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 45px;
+    height: 30px;
+  }
+  header .covid {
+    text-decoration: none;
+    color: #243941;
+    font-weight: bold;
+  }
+  header .covid span {
+    color: #D33E49;
+  }
+  header .menuList {
+    display: none;
+  }
+  header .menu-btn {
+    margin-left: auto;
+    margin-right: 30px;
+  }
+  header .menu-btn div {
+    width: 30px;
+    height: 3px;
+    background-color: #243941;
+    margin-bottom: 5px;
+  }
+  header .menu-btn div:nth-child(2) {
+    width: 20px;
+  }
+  .sideMenu {
+    width: 0%;
+    height: 0%;
+    background-color: #D33E49;
+    position: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-radius: 0px 320px 0px 0px;
+    visibility: hidden;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    z-index: 1000;
+  }
+  .sideMenu li {
+    list-style-type: none;
+  }
+  .sideMenu li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  .sideMenu li .contact-for-mobile {
+    border: #ffffff solid 2px;
+    padding: 10px 20px;
+    border-radius: 30px;
+  }
+  .sideMenu li .contact-for-mobile i {
+    margin-left: 5px;
+    -Webkit-text-fill-color: transparent;
+    -Webkit-text-stroke-width: 1px;
+  }
+  .toggle {
+    visibility: visible;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+@media (min-width: 765px) and (max-width: 768px) {
+  .sideMenu {
+    display: none;
+  }
+  header .menuList {
+    width: 65%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: auto;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    list-style-type: none;
+  }
+  header .menuList li a {
+    text-decoration: none;
+    color: #243941;
+    font-weight: bold;
+  }
+  header .menuList li a:hover {
+    color: #D33E49;
+    -webkit-text-decoration-line: underline;
+            text-decoration-line: underline;
+    text-underline-position: under;
+    -webkit-text-decoration-style: wavy;
+            text-decoration-style: wavy;
+    -webkit-text-decoration-color: #D33E49;
+            text-decoration-color: #D33E49;
+    text-decoration-skip-ink: none;
+  }
+  header .menu-btn, header .menuList .pinkContact {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .sideMenu {
+    border-radius: 0px 230px 0px 0px;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1024px) {
+  header .menuList .pinkContact {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  main {
+    margin: 60px auto;
+    width: 85%;
+  }
+  main .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  main .content .image-phone {
+    display: none;
+  }
+  main .content #about {
+    width: 50%;
+  }
+  main .content #about .alert {
+    display: inline-block;
+    color: #D33E49;
+    font-size: 12px;
+    padding: 10px 15px;
+    border-radius: 30px;
+    font-weight: bold;
+    background-color: #fcdef0;
+    margin-bottom: 40px;
+  }
+  main .content #about .alert span {
+    border: 2px solid #D33E49;
+    padding: 1px 8px;
+    border-radius: 50%;
+  }
+  main .content #about h1 {
+    color: #243941;
+    font-size: 3em;
+  }
+  main .content #about p {
+    margin-top: 30px;
+    margin-bottom: 70px;
+    line-height: 30px;
+    color: #243941;
+  }
+  main .content #about h3 a {
+    text-decoration: none;
+    color: #ffffff;
+    border: 2px solid #D33E49;
+    padding: 15px 40px;
+    border-radius: 30px;
+    background-color: #D33E49;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    color: #ffffff;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  }
+  main .content #about h3 a:hover {
+    background-color: #ffffff;
+    color: #D33E49;
+    padding: 15px 50px;
+  }
+  main .content .about-image img {
+    width: 500px;
+    height: 500px;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .call-btn {
+    display: none;
+  }
+  section {
+    width: 90%;
+    margin: 120px auto;
+  }
+  section #covid-cases {
+    margin: 0 auto;
+    width: 90%;
+    height: 450px;
+    border-radius: 0px 0px 30px 30px;
+    box-shadow: 10px 10px 5px -9px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 10px 10px 5px -7px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px -7px rgba(0, 0, 0, 0.75);
+  }
+  section #covid-cases .update {
+    color: #243941;
+    font-weight: bold;
+    text-align: center;
+  }
+  section #covid-cases .update span {
+    color: limegreen;
+  }
+  section #covid-cases .map-image {
+    width: 600px;
+    height: 250px;
+    margin: 30px auto;
+    display: block;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  section #covid-cases .covid-data {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    margin-top: 40px;
+  }
+  section #covid-cases .covid-data p {
+    text-align: center;
+    font-weight: bold;
+  }
+  section #covid-cases .covid-data .existing .existing-number, section #covid-cases .covid-data .confirmed .confirmed-number, section #covid-cases .covid-data .recovered .recovered-number, section #covid-cases .covid-data .deaths .death-number {
+    font-size: 2em;
+    color: #D33E49;
+  }
+  section #covid-cases .covid-data .recovered .recovered-number {
+    color: limegreen;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    margin: 20px auto;
+    width: 90%;
+  }
+  main .content {
+    width: inherit;
+    margin: 0 auto;
+  }
+  main .content #about {
+    width: inherit;
+    margin: 0 auto;
+  }
+  main .content #about .alert {
+    text-align: center;
+    color: #D33E49;
+    font-size: 1.5em;
+    margin-top: 30px;
+    font-weight: bold;
+  }
+  main .content #about .alert span {
+    background-color: #fcdef0;
+    padding: 0 12px;
+    border-radius: 50%;
+  }
+  main .content #about .image-phone {
+    width: 300px;
+    height: 300px;
+    margin: 30px auto;
+    display: block;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  main .content #about h1 {
+    text-align: center;
+    color: #243941;
+  }
+  main .content #about p {
+    color: #243941;
+    margin-top: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  main .content #about h3 {
+    text-align: center;
+  }
+  main .content #about h3 a {
+    text-decoration: none;
+    color: #ffffff;
+    border: 2px solid #D33E49;
+    padding: 15px 30px;
+    border-radius: 30px;
+    background-color: #D33E49;
+  }
+  main .content .about-image {
+    display: none;
+  }
+  .call-btn {
+    position: fixed;
+    bottom: 3%;
+    right: 5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #D33E49;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  .call-btn a {
+    text-decoration: none;
+    border: 2px solid #D33E49;
+    color: #ffffff;
+    font-size: 1.3em;
+  }
+  .spacing {
+    margin-bottom: 20px;
+  }
+  section {
+    width: 100%;
+    margin: 50px auto;
+    height: auto;
+    background-color: #f2f3f7;
+    padding: 30px;
+    border-radius: 400px 0px 0px 0px;
+  }
+  section #covid-cases {
+    margin: 0 auto;
+    padding: 20px;
+    width: inherit;
+  }
+  section #covid-cases .update {
+    color: #243941;
+    font-weight: bold;
+    text-align: center;
+  }
+  section #covid-cases .update span {
+    color: limegreen;
+  }
+  section #covid-cases .map-image {
+    width: 300px;
+    height: 150px;
+    margin: 30px auto;
+    display: block;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  section #covid-cases .covid-data {
+    margin-top: 40px;
+  }
+  section #covid-cases .covid-data p {
+    text-align: center;
+    font-weight: bold;
+  }
+  section #covid-cases .covid-data .existing .existing-number, section #covid-cases .covid-data .confirmed .confirmed-number, section #covid-cases .covid-data .recovered .recovered-number, section #covid-cases .covid-data .deaths .death-number {
+    font-size: 1.5em;
+    color: #D33E49;
+  }
+  section #covid-cases .covid-data .recovered .recovered-number {
+    color: limegreen;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  main .content #about .image-phone {
+    width: 250px;
+  }
+  section #covid-cases {
+    width: 90%;
+  }
+  section #covid-cases .map-image {
+    width: 250px;
+    height: 100px;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  main .content #about .image-phone {
+    width: 200px;
+  }
+  section #covid-cases {
+    width: 90%;
+  }
+  section #covid-cases .map-image {
+    width: 200px;
+    height: 100px;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1024px) {
+  .call-btn {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #D33E49;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  .call-btn a {
+    text-decoration: none;
+    border: 2px solid #D33E49;
+    color: #ffffff;
+    font-size: 1.5em;
+  }
+}
+
+@media (min-width: 765px) and (max-width: 768px) {
+  .call-btn {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #D33E49;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+  .call-btn a {
+    text-decoration: none;
+    border: 2px solid #D33E49;
+    color: #ffffff;
+    font-size: 1.5em;
+  }
+  section {
+    border-radius: 800px 0px 0px 0px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

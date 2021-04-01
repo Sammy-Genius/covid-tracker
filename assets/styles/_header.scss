@@ -1,0 +1,240 @@
+//for desktop screens
+@media screen and (min-width: 769px) {
+    header {
+        width: 90%;
+        margin: 0 auto;
+        height:10%;
+        display:flex;
+        align-items:center;
+    
+        .logo {
+            text-decoration:none;
+            margin-left:20px;
+    
+            img {
+                background-size: 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+                width:45px;
+                height:30px;
+            }
+        }
+    
+        .covid {
+            text-decoration: none;
+            color:$blue;
+            font-weight:bold;
+    
+            span {
+                color:$pink;
+            }
+        }
+    
+        .menuList {
+            width:50%;
+            display:flex;
+            margin-left:auto;
+            justify-content:space-evenly;
+            list-style-type: none;
+    
+            li {
+                a {
+                    text-decoration: none;
+                    color:$blue;
+                    font-weight: bold;
+    
+                    &:hover {
+                        color:$pink;
+                        text-decoration-line: underline;
+                        text-underline-position: under;
+                        text-decoration-style:wavy;
+                        text-decoration-color: $pink;
+                        text-decoration-skip-ink: none;
+                    }
+                }
+                .pinkContact {
+                    color:$pink;
+                    border:$pink solid 2px;
+                    padding:5px 20px;
+                    border-radius:20px;
+                    transition:color .2s ease-in-out;
+    
+                    &:hover {
+                        color:$white;
+                        background-color:$pink;
+                    }
+    
+                    i {
+                        margin-left:5px;
+                        -Webkit-text-fill-color:transparent;
+                        -Webkit-text-stroke-width:1px;
+                        
+                    }
+                }
+            }
+        }
+        
+        .menu-btn {
+            display:none;
+        }
+    }
+
+    .sideMenu {
+        display:none;
+    }
+}
+
+//for smaller screens(<= 768px smartphones)
+@media screen and (max-width: 768px) {
+    header {
+        width: 100%;
+        height:10%;
+        display:flex;
+        align-items:center;
+    
+        .logo {
+            text-decoration:none;
+            margin-left:20px;
+    
+            img {
+                background-size: 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+                width:45px;
+                height:30px;
+            }
+        }
+    
+        .covid {
+            text-decoration: none;
+            color:$blue;
+            font-weight:bold;
+    
+            span {
+                color:$pink;
+            }
+        }
+
+        .menuList {
+            display:none;
+        }
+
+        .menu-btn {
+            margin-left:auto;
+            margin-right:30px;
+
+            div {
+                width:30px;
+                height:3px;
+                background-color:$blue;
+                margin-bottom:5px;
+
+                &:nth-child(2) {
+                    width:20px;
+                }
+            }
+        }
+    }
+        
+    .sideMenu {
+        width:0%;
+        height:0%;
+        background-color:$pink;
+        position:fixed;
+        display:flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        border-radius:0px 320px 0px 0px;
+        visibility: hidden;
+        transition:all .5s ease-in-out;
+        z-index:1000;
+
+        li {
+            list-style-type: none;
+            
+
+            a {
+                text-decoration: none;
+                color:$white;
+                font-weight: bold;
+                font-size:1.2em;
+            }
+
+            .contact-for-mobile {
+                border:$white solid 2px;
+                padding:10px 20px;
+                border-radius:30px;
+
+                i {
+                    margin-left:5px;
+                    -Webkit-text-fill-color:transparent;
+                    -Webkit-text-stroke-width:1px;
+                }
+            }
+        }
+
+    }
+
+    .toggle {
+        visibility: visible;
+        width:100%;
+        height:100%;
+        bottom:0;
+        right:0;
+    }
+}
+
+//screens between 765px and 768px 
+@media (min-width:765px) and (max-width:768px) {
+    .sideMenu {
+        display:none;
+    }
+
+    header {
+        .menuList {
+            width:65%;
+            display:flex;
+            margin-left:auto;
+            justify-content:space-evenly;
+            list-style-type: none;
+    
+            li {
+                a {
+                    text-decoration: none;
+                    color:$blue;
+                    font-weight: bold;
+    
+                    &:hover {
+                        color:$pink;
+                        text-decoration-line: underline;
+                        text-underline-position: under;
+                        text-decoration-style: wavy;
+                        text-decoration-color: $pink;
+                        text-decoration-skip-ink: none;
+                    }
+                }
+            }
+        }
+    }
+    header {
+        .menu-btn, .menuList .pinkContact {
+            display:none;
+        }
+    }
+
+}
+
+//for screens at 320px or less
+@media screen and (max-width: 320px) {
+    .sideMenu {
+        border-radius: 0px 230px 0px 0px;
+    }
+}
+
+//screens between 1000 and 1024px 
+@media (min-width: 1000px) and (max-width: 1024px) {
+    header .menuList .pinkContact {
+        display:none;
+    }
+}
