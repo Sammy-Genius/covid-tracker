@@ -1,29 +1,18 @@
 //for desktop screens
 @media screen and (min-width: 769px) {
     header {
-        width: 90%;
-        margin: 0 auto;
+        width: 85%;
         height:10%;
         display:flex;
         align-items:center;
-    
-        .logo {
-            text-decoration:none;
-            margin-left:20px;
-    
-            img {
-                background-size: 100%;
-                background-position: center;
-                background-repeat: no-repeat;
-                width:45px;
-                height:30px;
-            }
-        }
+        margin:0 auto;
     
         .covid {
             text-decoration: none;
             color:$blue;
             font-weight:bold;
+            font-family: 'Italianno', cursive;
+            font-size:1.3em;
     
             span {
                 color:$pink;
@@ -62,6 +51,7 @@
                     &:hover {
                         color:$white;
                         background-color:$pink;
+                        cursor: pointer;
                     }
     
                     i {
@@ -84,7 +74,7 @@
     }
 }
 
-//for smaller screens(<= 768px smartphones)
+//for smaller screens(768px smartphones and below)
 @media screen and (max-width: 768px) {
     header {
         width: 100%;
@@ -92,23 +82,14 @@
         display:flex;
         align-items:center;
     
-        .logo {
-            text-decoration:none;
-            margin-left:20px;
-    
-            img {
-                background-size: 100%;
-                background-position: center;
-                background-repeat: no-repeat;
-                width:45px;
-                height:30px;
-            }
-        }
-    
         .covid {
             text-decoration: none;
             color:$blue;
             font-weight:bold;
+            margin-left:30px;
+            font-family: 'Italianno', cursive;
+            font-size:1.3em;
+
     
             span {
                 color:$pink;
@@ -136,45 +117,53 @@
         }
     }
         
-    .sideMenu {
-        width:0%;
-        height:0%;
-        background-color:$pink;
-        position:fixed;
-        display:flex;
-        align-items: center;
-        justify-content: space-evenly;
-        flex-direction: column;
-        border-radius:0px 320px 0px 0px;
-        visibility: hidden;
-        transition:all .5s ease-in-out;
-        z-index:1000;
 
-        li {
-            list-style-type: none;
-            
+        .sideMenu {
+            width:0%;
+            height:0%;
+            background-color:#EE4855;
+            position:fixed;
+            display:flex;
+            align-items: center;
+            justify-content: space-evenly;
+            border-radius:0px 320px 0px 0px;
+            visibility: hidden;
+            transition:all .5s ease-in-out;
+            z-index:1000;
 
-            a {
-                text-decoration: none;
-                color:$white;
-                font-weight: bold;
-                font-size:1.2em;
-            }
+    
+            .menu {
+               display:flex;
+               flex-direction: column;
+               justify-content: space-evenly;
+               height:90%;
 
-            .contact-for-mobile {
-                border:$white solid 2px;
-                padding:10px 20px;
-                border-radius:30px;
-
-                i {
-                    margin-left:5px;
-                    -Webkit-text-fill-color:transparent;
-                    -Webkit-text-stroke-width:1px;
+                li {
+                    list-style-type: none;
+                    
+        
+                    a {
+                        text-decoration: none;
+                        color:$white;
+                        font-weight: bold;
+                        font-size:1.2em;
+                    }
+        
+                    .contact-for-mobile {
+                        border:$white solid 2px;
+                        padding:10px 20px;
+                        border-radius:30px;
+        
+                        i {
+                            margin-left:5px;
+                            -Webkit-text-fill-color:transparent;
+                            -Webkit-text-stroke-width:1px;
+                        }
+                    }
                 }
             }
+    
         }
-
-    }
 
     .toggle {
         visibility: visible;
@@ -185,7 +174,7 @@
     }
 }
 
-//screens between 765px and 768px 
+//screens for tablets between 765px and 768px 
 @media (min-width:765px) and (max-width:768px) {
     .sideMenu {
         display:none;
@@ -225,7 +214,7 @@
 
 }
 
-//for screens at 320px or less
+//for screens 320px or less
 @media screen and (max-width: 320px) {
     .sideMenu {
         border-radius: 0px 230px 0px 0px;

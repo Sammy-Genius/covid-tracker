@@ -1,11 +1,46 @@
-const menuBtn = document.querySelector(".menu-btn"),
-      sideMenu = document.querySelector(".sideMenu");
+gsap.registerPlugin(ScrollTrigger);
 
-//this line of code opens and closes the mobile side menu
+//screen preloader
+const preloader = document.querySelector(".preloader");
+
+setTimeout(() => {
+   preloader.classList.toggle("disappear");
+   gsap.from("header", {opacity:0, x:50, duration:1, ease:Power2.easeInOut});
+}, 3000);
+
+
+
+//this line of code opens and collapses the mobile side menu
+const menuBtn = document.querySelector(".menu-btn"),
+      sideMenu = document.querySelector(".sideMenu"),
+      menu = document.querySelectorAll(".menu");
+
 menuBtn.addEventListener("click", () => {
     sideMenu.classList.toggle('toggle');
 });
 
+//this collapses the side menu when a menu item is clicked
+const sideMenuAbout = document.querySelector(".sideMenuAbout"),
+      sideMenuUpdates = document.querySelector(".sideMenuUpdates"),
+      sideMenuContagion = document.querySelector(".sideMenuContagion"),
+      sideMenuSymptoms= document.querySelector(".sideMenuSymptoms"),
+      sideMenuPrevention = document.querySelector(".sideMenuPrevention");
+
+sideMenuAbout.addEventListener("click", () => {
+   sideMenu.classList.toggle('toggle');
+});
+sideMenuUpdates.addEventListener("click", () => {
+   sideMenu.classList.toggle('toggle');
+});
+sideMenuContagion.addEventListener("click", () => {
+   sideMenu.classList.toggle('toggle');
+});
+sideMenuSymptoms.addEventListener("click", () => {
+   sideMenu.classList.toggle('toggle');
+});
+sideMenuPrevention.addEventListener("click", () => {
+   sideMenu.classList.toggle('toggle');
+});
 
 
 //this line of code fetches the COVID-19 API

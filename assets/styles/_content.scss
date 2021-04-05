@@ -1,0 +1,683 @@
+//for desktop screens
+@media screen and (min-width: 769px) {
+    main {
+        margin: 100px auto;
+        width:85%;
+
+        .content {
+            display:flex;
+
+            .image-phone {
+                display:none;
+            }
+
+            #about {
+                width:50%;
+    
+                .alert {
+                    display:inline-block;
+                    color:$pink;
+                    font-size:12px;
+                    padding: 10px 15px;
+                    border-radius:30px;
+                    font-weight:bold;
+                    background-color: $lightPink;
+                    margin-bottom:40px;
+        
+                    span {
+                        border:2px solid $pink;
+                        padding:1px 8px;
+                        border-radius:50%;
+                    }
+                }
+        
+                h1 {
+                    color:$blue;
+                    font-size:3em;
+                }
+
+                h1 + h1 {
+                    color:$pink;
+                }
+    
+                p {
+                    margin-top:30px;
+                    margin-bottom:70px;
+                    line-height: 30px;
+                    color:$blue;
+                }
+    
+                h3 a {
+                    text-decoration:none;
+                    color:$white;
+                    border: 2px solid $pink;
+                    padding:15px 40px;
+                    border-radius:30px;
+                    background-color:$pink;
+                    transition:all .2s ease-in-out;
+                    color:$white;
+                    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+                                -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+                                -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+
+                    &:hover {
+                        background-color:$white;
+                        color:$pink;
+                        padding:15px 50px;
+                        cursor: pointer;
+                    }
+                }
+    
+            }
+    
+            .about-image img {
+                width:500px;
+                height:500px;
+                background-size:100%;
+                background-position:center;
+                background-repeat:no-repeat;
+            }
+        }
+    }
+
+    .call-btn {
+        display:none;
+    }
+
+    section {
+        width: 90%;
+        margin:120px auto;
+
+        #covid-updates {
+            margin:0 auto;
+            width:90%;
+            padding-bottom:30px;
+            border-radius:0px 0px 30px 30px;
+            box-shadow: 10px 10px 5px -9px rgba(0,0,0,0.75);
+                        -webkit-box-shadow: 10px 10px 5px -7px rgba(0,0,0,0.75);
+                        -moz-box-shadow: 10px 10px 5px -7px rgba(0,0,0,0.75);
+
+            .update {
+                color:$blue;
+                font-weight:bold;
+                text-align: center;
+                margin-top:30px;
+
+                span {
+                    color:limegreen;
+                }
+            }
+
+            .map-image {
+                width:600px;
+                height:250px;
+                margin:30px auto;
+                display: block;
+                background-size:100%;
+                background-position:center;
+                background-repeat:no-repeat;
+            }
+
+            .covid-data {
+                display:flex;
+                justify-content: space-evenly;
+                margin-top:40px;
+
+                p {
+                    text-align:center;
+                    font-weight:bold;
+                }
+
+                .existing .existing-number, .confirmed .confirmed-number, .recovered .recovered-number, .deaths .death-number {
+                    font-size:2em;
+                    color:$pink;
+                }
+
+                .recovered .recovered-number {
+                    color:limegreen;
+                }
+            }
+
+        }
+    }
+
+    .wrapper {
+        width:50%;
+        margin:30px auto;
+    }
+
+    #contagion {
+        width:90%;
+        margin:30px auto;
+    
+            p {
+                color:$blue;
+                text-align:center;
+                margin:30px;
+                line-height:30px;
+            }
+
+       .image-container {
+            margin:60px auto;
+            width:inherit;
+            display:flex;
+            justify-content: space-evenly;
+            padding:15px 15px;
+            border-radius:30px 30px 30px 30px;
+            background-color:#f2f3f7;
+            box-shadow: -3px -20px 15px 3px #f2f3f7,
+                        -3px -20px 15px 3px #f2f3f777;
+       }
+    }
+
+    .caption-style, .heading-style, .points {
+        color:$pink;
+        text-align:center;
+        font-size:1.5em;
+    }
+
+    .heading-style {
+        font-size: 3em;
+    }
+
+    .points {
+        font-size: 2.5em;
+    }
+
+    .box-style {
+        width: 350px;
+        border:2px solid $white;
+        background-color:$white;
+        border-radius:20px 20px 20px 20px;
+        margin-bottom:30px;
+    }
+
+    .image-style, .image-size {
+        background-position: center;
+        background-position:100%;
+        background-repeat:no-repeat;
+        width:250px;
+        height:250px;
+        margin:10px auto;  
+        display:block;
+    }
+
+    .image-size {
+        width:500px;
+        height:500px;
+    }
+
+    .text-style, .text-style-form {
+        color:$blue;
+        line-height:30px;
+        text-align:center;
+        padding:30px;
+    }
+
+    .text-style-form {
+        text-align:justify;
+    }
+
+    #symptoms {
+        width:80%;
+        margin:30px auto;
+
+        .symptoms-wrapper {
+            width:80%;
+            margin:0 auto;
+            display:flex;
+            justify-content: space-around;
+            align-items: center;
+
+            .symptoms-image {
+                margin:30px;
+                width:500px;
+                height:500px;
+                background-size:100%;
+                background-position:center;
+                background-repeat:no-repeat;
+            }
+
+            ul {
+                margin-top:30px;
+                
+                li {
+                    margin-bottom:30px;
+                    color:$pink;
+                    font-weight:bold;
+                }
+                
+            }
+        }
+    }
+
+    #prevention-desktop {
+        width:90%;
+        margin:0 auto;
+
+        .prevention-container {
+            width:80%;
+            margin:60px auto;
+            display:flex;
+            justify-content: space-evenly;
+        }
+    
+        .align-content {
+            width:50%;
+            margin:0 auto;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    
+        .number{
+            background-color:$lightPink;
+            padding:15px 20px;
+            border-radius:50%;
+        }
+    
+        .align-text-and-number {
+            display:flex;
+        }
+    }
+
+    #prevention-mobile {
+        display:none;
+    }
+}
+
+
+//for smaller screens 768px (smartphones)
+@media screen and (max-width: 768px) {
+    main {
+        margin: 70px auto;
+        width:90%;
+
+        .content {
+            width:inherit;
+            margin:0 auto;
+
+            #about {
+                width:inherit;
+                margin:0 auto;
+
+                .alert {
+                    text-align:center;
+                    color:$pink;
+                    font-size:1.5em;
+                    margin-top:30px;
+                    font-weight:bold;
+
+                    span {
+                        background-color:$lightPink;
+                        padding:0 12px;
+                        border-radius:50%;
+                    }
+                }
+
+                .image-phone {
+                    width:300px;
+                    height:300px;
+                    margin:30px auto;
+                    display: block;
+                    background-size:100%;
+                    background-position:center;
+                    background-repeat:no-repeat;
+                }
+
+                h1 {
+                    text-align:center;
+                    color:$blue;
+                }
+
+                p {
+                    color:$blue;
+                    margin-top:30px;
+                    line-height:30px;
+                    text-align:center;
+                    margin-bottom:60px;
+                }
+
+                h3 {
+                    text-align:center;
+
+                    a {
+                        text-decoration:none;
+                        color:$white;
+                        border: 2px solid $pink;
+                        padding:15px 30px;
+                        border-radius:30px;
+                        background-color:$pink;
+                    }
+                }
+
+            }
+
+            .about-image {
+                display:none;
+            }
+        }
+    }
+
+    .call-btn {
+        position:fixed;
+        bottom:3%;
+        right:5%;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $pink;
+        width:50px;
+        height:50px;
+        border-radius:50%;
+        
+        a {
+            text-decoration: none;
+            border:2px solid $pink;
+            color:$white;
+            font-size: 1.3em;
+        }
+    }
+
+    .spacing {
+        margin-bottom:20px;
+    }
+
+    section {
+        width:100%;
+        margin:50px auto;
+        margin-top:50px;
+        background-color: #f2f3f7;
+        padding:30px;
+        border-radius:400px 0px 0px 0px;
+
+        #covid-updates {
+            width:100%;
+            margin:0 auto;
+            padding:20px;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+    
+            .update {
+                color:$blue;
+                font-weight:bold;
+                text-align:center;
+                margin-top:30px;
+
+                span {
+                    color:limegreen;
+                }
+            }
+
+            .map-image {
+                width:300px;
+                margin-top:30px;
+                display: block;
+                background-size:100%;
+                background-position:center;
+                background-repeat:no-repeat;
+            }
+
+            .covid-data {
+                margin-top:40px;
+
+                p {
+                    text-align:center;
+                    font-weight:bold;
+                }
+
+                .existing .existing-number, .confirmed .confirmed-number, .recovered .recovered-number, .deaths .death-number {
+                    font-size:1.5em;
+                    color:$pink;
+                }
+
+                .recovered .recovered-number {
+                    color:limegreen;
+                }
+            }
+        }
+    }
+
+    #contagion {
+        width:90%;
+        margin:30px auto;
+        
+        .wrapper {
+            width:95%;
+            margin:30px auto;
+
+            h1 {
+                text-align:center;
+                color:$pink;
+            }
+    
+            p {
+                color:$blue;
+                text-align:center;
+                margin:30px;
+                line-height:30px;
+            }
+        }
+
+       .image-container {
+            margin:60px auto;
+            min-width:90%;
+            display:flex;
+            padding:15px 15px;
+            border-radius:30px 30px 30px 30px;
+            overflow-x: auto;
+            background-color:#f2f3f7;
+            box-shadow: -3px -20px 15px 3px #f2f3f7,
+                        -3px -20px 15px 3px #f2f3f777;
+       }
+
+       .image-container::-webkit-scrollbar {
+           width:0;
+       }
+    }
+
+    .caption-style, .heading-style, .points {
+        color:$pink;
+        text-align:center;
+        font-size:1.5em;
+    }
+
+    .points {
+        font-size: 2.5em;
+    }
+
+    .heading-style {
+        font-size:3em;
+    }
+
+    .box-style {
+        min-width: 250px;
+        border:2px solid $white;
+        background-color:$white;
+        border-radius:20px 20px 20px 20px;
+        margin-bottom:30px;
+        margin-right:10px;
+    }
+
+    .image-style {
+        background-position: center;
+        background-position:100%;
+        background-repeat:no-repeat;
+        width:200px;
+        height:200px;
+        margin:10px auto;  
+        display:block;
+    }
+
+    .text-style {
+        color:$blue;
+        line-height:30px;
+        text-align:center;
+        padding:30px;
+    }
+
+    #symptoms {
+        margin:30px auto;
+        width:90%;
+
+        .symptoms-image {
+            margin:30px auto;
+            display:block;
+            width:300px;
+            height:300px;
+            background-size:100%;
+            background-position:center;
+            background-repeat:no-repeat;
+        }
+
+        ul {
+            margin-top:30px;
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            
+            li {
+                margin-bottom:20px;
+                color:$pink;
+                font-weight:bold;
+            }
+        }
+    }
+
+    .image-size-mobile {
+        width:300px;
+        height:300px;
+        background-position: center;
+        background-size:100%;
+        background-repeat: no-repeat;
+        margin:30px auto;
+        display:block;
+    }
+
+    .number, .number-padding{
+        background-color:$lightPink;
+        padding:15px 20px;
+        border-radius:50%;
+    }
+
+    .number-padding {
+        padding:10px 15px;
+    }
+
+    #prevention-mobile {
+        width:90%;
+        margin:30px auto;
+
+        .prevention-mobile-wrapper {
+            width:90%;
+            margin:30px auto;
+        }
+    }
+
+    #prevention-desktop {
+        display:none;
+    }
+}
+
+//for screens smaller than 320px
+@media screen and (max-width:320px) {
+    main .content #about .image-phone{
+        width:250px;
+    }
+
+    section {
+        width:100%;
+
+        #covid-updates {
+            width:100%;
+
+            .map-image {
+            margin-top:30px;
+            width:250px;
+            height:100px;
+          }
+        }
+    }
+}
+
+//for screens smaller than 280px
+@media screen and (max-width:280px) {
+    main .content #about .image-phone{
+        width:200px;
+    }
+    section {
+
+        #covid-updates {
+            width:90%;
+
+            .map-image {
+            width:200px;
+            height:100px;
+            }
+        }
+    }
+
+    #symptoms .symptoms-image {
+        width:200px;
+        height:200px;
+    }
+}
+
+//screens between 765px and 768px 
+@media (min-width:765px) and (max-width:768px) {
+    .call-btn {
+        position:fixed;
+        bottom:5%;
+        right:5%;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $pink;
+        width:80px;
+        height:80px;
+        border-radius:50%;
+        
+        a {
+            text-decoration: none;
+            border:2px solid $pink;
+            color:$white;
+            font-size: 1.5em;
+        }
+    }   
+    section {
+        border-radius: 800px 0px 0px 0px;
+    }
+}
+
+//screens between 1000 and 1024px 
+@media (min-width: 1000px) and (max-width: 1024px) {
+    .call-btn {
+        position:fixed;
+        bottom:5%;
+        right:5%;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $pink;
+        width:100px;
+        height:100px;
+        border-radius:50%;
+        
+        a {
+            text-decoration: none;
+            border:2px solid $pink;
+            color:$white;
+            font-size: 1.5em;
+        }
+    }
+
+    #contagion .image-container {
+        width:95%;
+    }
+
+    .box-style {
+        margin-right:10px;
+    }
+}

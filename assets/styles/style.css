@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Italianno&family=Playball&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -11,10 +12,64 @@ body {
   scroll-behavior: smooth;
 }
 
+.preloader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #EE4855;
+  z-index: 5000;
+  pointer-events: none;
+}
+
+.preloader h1 {
+  color: #ffffff;
+  font-size: 2.5em;
+}
+
+.disappear {
+  -webkit-animation: vanish 1s ease-out forwards;
+          animation: vanish 1s ease-out forwards;
+}
+
+@-webkit-keyframes vanish {
+  50% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-200%);
+            transform: translateY(-200%);
+    display: none;
+  }
+}
+
+@keyframes vanish {
+  50% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-200%);
+            transform: translateY(-200%);
+    display: none;
+  }
+}
+
 @media screen and (min-width: 769px) {
   header {
-    width: 90%;
-    margin: 0 auto;
+    width: 85%;
     height: 10%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -22,25 +77,17 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-  header .logo {
-    text-decoration: none;
-    margin-left: 20px;
-  }
-  header .logo img {
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 45px;
-    height: 30px;
+    margin: 0 auto;
   }
   header .covid {
     text-decoration: none;
     color: #243941;
     font-weight: bold;
+    font-family: 'Italianno', cursive;
+    font-size: 1.3em;
   }
   header .covid span {
-    color: #D33E49;
+    color: #fd5e53;
   }
   header .menuList {
     width: 50%;
@@ -59,19 +106,19 @@ body {
     font-weight: bold;
   }
   header .menuList li a:hover {
-    color: #D33E49;
+    color: #fd5e53;
     -webkit-text-decoration-line: underline;
             text-decoration-line: underline;
     text-underline-position: under;
     -webkit-text-decoration-style: wavy;
             text-decoration-style: wavy;
-    -webkit-text-decoration-color: #D33E49;
-            text-decoration-color: #D33E49;
+    -webkit-text-decoration-color: #fd5e53;
+            text-decoration-color: #fd5e53;
     text-decoration-skip-ink: none;
   }
   header .menuList li .pinkContact {
-    color: #D33E49;
-    border: #D33E49 solid 2px;
+    color: #fd5e53;
+    border: #fd5e53 solid 2px;
     padding: 5px 20px;
     border-radius: 20px;
     -webkit-transition: color .2s ease-in-out;
@@ -79,7 +126,8 @@ body {
   }
   header .menuList li .pinkContact:hover {
     color: #ffffff;
-    background-color: #D33E49;
+    background-color: #fd5e53;
+    cursor: pointer;
   }
   header .menuList li .pinkContact i {
     margin-left: 5px;
@@ -105,24 +153,16 @@ body {
         -ms-flex-align: center;
             align-items: center;
   }
-  header .logo {
-    text-decoration: none;
-    margin-left: 20px;
-  }
-  header .logo img {
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 45px;
-    height: 30px;
-  }
   header .covid {
     text-decoration: none;
     color: #243941;
     font-weight: bold;
+    margin-left: 30px;
+    font-family: 'Italianno', cursive;
+    font-size: 1.3em;
   }
   header .covid span {
-    color: #D33E49;
+    color: #fd5e53;
   }
   header .menuList {
     display: none;
@@ -143,7 +183,7 @@ body {
   .sideMenu {
     width: 0%;
     height: 0%;
-    background-color: #D33E49;
+    background-color: #EE4855;
     position: fixed;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -154,31 +194,40 @@ body {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     border-radius: 0px 320px 0px 0px;
     visibility: hidden;
     -webkit-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
     z-index: 1000;
   }
-  .sideMenu li {
+  .sideMenu .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    height: 90%;
+  }
+  .sideMenu .menu li {
     list-style-type: none;
   }
-  .sideMenu li a {
+  .sideMenu .menu li a {
     text-decoration: none;
     color: #ffffff;
     font-weight: bold;
     font-size: 1.2em;
   }
-  .sideMenu li .contact-for-mobile {
+  .sideMenu .menu li .contact-for-mobile {
     border: #ffffff solid 2px;
     padding: 10px 20px;
     border-radius: 30px;
   }
-  .sideMenu li .contact-for-mobile i {
+  .sideMenu .menu li .contact-for-mobile i {
     margin-left: 5px;
     -Webkit-text-fill-color: transparent;
     -Webkit-text-stroke-width: 1px;
@@ -213,14 +262,14 @@ body {
     font-weight: bold;
   }
   header .menuList li a:hover {
-    color: #D33E49;
+    color: #fd5e53;
     -webkit-text-decoration-line: underline;
             text-decoration-line: underline;
     text-underline-position: under;
     -webkit-text-decoration-style: wavy;
             text-decoration-style: wavy;
-    -webkit-text-decoration-color: #D33E49;
-            text-decoration-color: #D33E49;
+    -webkit-text-decoration-color: #fd5e53;
+            text-decoration-color: #fd5e53;
     text-decoration-skip-ink: none;
   }
   header .menu-btn, header .menuList .pinkContact {
@@ -242,7 +291,7 @@ body {
 
 @media screen and (min-width: 769px) {
   main {
-    margin: 60px auto;
+    margin: 100px auto;
     width: 85%;
   }
   main .content {
@@ -258,7 +307,7 @@ body {
   }
   main .content #about .alert {
     display: inline-block;
-    color: #D33E49;
+    color: #fd5e53;
     font-size: 12px;
     padding: 10px 15px;
     border-radius: 30px;
@@ -267,13 +316,16 @@ body {
     margin-bottom: 40px;
   }
   main .content #about .alert span {
-    border: 2px solid #D33E49;
+    border: 2px solid #fd5e53;
     padding: 1px 8px;
     border-radius: 50%;
   }
   main .content #about h1 {
     color: #243941;
     font-size: 3em;
+  }
+  main .content #about h1 + h1 {
+    color: #fd5e53;
   }
   main .content #about p {
     margin-top: 30px;
@@ -284,10 +336,10 @@ body {
   main .content #about h3 a {
     text-decoration: none;
     color: #ffffff;
-    border: 2px solid #D33E49;
+    border: 2px solid #fd5e53;
     padding: 15px 40px;
     border-radius: 30px;
-    background-color: #D33E49;
+    background-color: #fd5e53;
     -webkit-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
     color: #ffffff;
@@ -297,8 +349,9 @@ body {
   }
   main .content #about h3 a:hover {
     background-color: #ffffff;
-    color: #D33E49;
+    color: #fd5e53;
     padding: 15px 50px;
+    cursor: pointer;
   }
   main .content .about-image img {
     width: 500px;
@@ -314,24 +367,25 @@ body {
     width: 90%;
     margin: 120px auto;
   }
-  section #covid-cases {
+  section #covid-updates {
     margin: 0 auto;
     width: 90%;
-    height: 450px;
+    padding-bottom: 30px;
     border-radius: 0px 0px 30px 30px;
     box-shadow: 10px 10px 5px -9px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 10px 10px 5px -7px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 10px 10px 5px -7px rgba(0, 0, 0, 0.75);
   }
-  section #covid-cases .update {
+  section #covid-updates .update {
     color: #243941;
     font-weight: bold;
     text-align: center;
+    margin-top: 30px;
   }
-  section #covid-cases .update span {
+  section #covid-updates .update span {
     color: limegreen;
   }
-  section #covid-cases .map-image {
+  section #covid-updates .map-image {
     width: 600px;
     height: 250px;
     margin: 30px auto;
@@ -340,7 +394,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
   }
-  section #covid-cases .covid-data {
+  section #covid-updates .covid-data {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -349,22 +403,164 @@ body {
             justify-content: space-evenly;
     margin-top: 40px;
   }
-  section #covid-cases .covid-data p {
+  section #covid-updates .covid-data p {
     text-align: center;
     font-weight: bold;
   }
-  section #covid-cases .covid-data .existing .existing-number, section #covid-cases .covid-data .confirmed .confirmed-number, section #covid-cases .covid-data .recovered .recovered-number, section #covid-cases .covid-data .deaths .death-number {
+  section #covid-updates .covid-data .existing .existing-number, section #covid-updates .covid-data .confirmed .confirmed-number, section #covid-updates .covid-data .recovered .recovered-number, section #covid-updates .covid-data .deaths .death-number {
     font-size: 2em;
-    color: #D33E49;
+    color: #fd5e53;
   }
-  section #covid-cases .covid-data .recovered .recovered-number {
+  section #covid-updates .covid-data .recovered .recovered-number {
     color: limegreen;
+  }
+  .wrapper {
+    width: 50%;
+    margin: 30px auto;
+  }
+  #contagion {
+    width: 90%;
+    margin: 30px auto;
+  }
+  #contagion p {
+    color: #243941;
+    text-align: center;
+    margin: 30px;
+    line-height: 30px;
+  }
+  #contagion .image-container {
+    margin: 60px auto;
+    width: inherit;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    padding: 15px 15px;
+    border-radius: 30px 30px 30px 30px;
+    background-color: #f2f3f7;
+    -webkit-box-shadow: -3px -20px 15px 3px #f2f3f7, -3px -20px 15px 3px #f2f3f777;
+            box-shadow: -3px -20px 15px 3px #f2f3f7, -3px -20px 15px 3px #f2f3f777;
+  }
+  .caption-style, .heading-style, .points {
+    color: #fd5e53;
+    text-align: center;
+    font-size: 1.5em;
+  }
+  .heading-style {
+    font-size: 3em;
+  }
+  .points {
+    font-size: 2.5em;
+  }
+  .box-style {
+    width: 350px;
+    border: 2px solid #ffffff;
+    background-color: #ffffff;
+    border-radius: 20px 20px 20px 20px;
+    margin-bottom: 30px;
+  }
+  .image-style, .image-size {
+    background-position: center;
+    background-position: 100%;
+    background-repeat: no-repeat;
+    width: 250px;
+    height: 250px;
+    margin: 10px auto;
+    display: block;
+  }
+  .image-size {
+    width: 500px;
+    height: 500px;
+  }
+  .text-style, .text-style-form {
+    color: #243941;
+    line-height: 30px;
+    text-align: center;
+    padding: 30px;
+  }
+  .text-style-form {
+    text-align: justify;
+  }
+  #symptoms {
+    width: 80%;
+    margin: 30px auto;
+  }
+  #symptoms .symptoms-wrapper {
+    width: 80%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #symptoms .symptoms-wrapper .symptoms-image {
+    margin: 30px;
+    width: 500px;
+    height: 500px;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  #symptoms .symptoms-wrapper ul {
+    margin-top: 30px;
+  }
+  #symptoms .symptoms-wrapper ul li {
+    margin-bottom: 30px;
+    color: #fd5e53;
+    font-weight: bold;
+  }
+  #prevention-desktop {
+    width: 90%;
+    margin: 0 auto;
+  }
+  #prevention-desktop .prevention-container {
+    width: 80%;
+    margin: 60px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  #prevention-desktop .align-content {
+    width: 50%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #prevention-desktop .number {
+    background-color: #fcdef0;
+    padding: 15px 20px;
+    border-radius: 50%;
+  }
+  #prevention-desktop .align-text-and-number {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #prevention-mobile {
+    display: none;
   }
 }
 
 @media screen and (max-width: 768px) {
   main {
-    margin: 20px auto;
+    margin: 70px auto;
     width: 90%;
   }
   main .content {
@@ -377,7 +573,7 @@ body {
   }
   main .content #about .alert {
     text-align: center;
-    color: #D33E49;
+    color: #fd5e53;
     font-size: 1.5em;
     margin-top: 30px;
     font-weight: bold;
@@ -413,10 +609,10 @@ body {
   main .content #about h3 a {
     text-decoration: none;
     color: #ffffff;
-    border: 2px solid #D33E49;
+    border: 2px solid #fd5e53;
     padding: 15px 30px;
     border-radius: 30px;
-    background-color: #D33E49;
+    background-color: #fd5e53;
   }
   main .content .about-image {
     display: none;
@@ -434,14 +630,14 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    background-color: #D33E49;
+    background-color: #fd5e53;
     width: 50px;
     height: 50px;
     border-radius: 50%;
   }
   .call-btn a {
     text-decoration: none;
-    border: 2px solid #D33E49;
+    border: 2px solid #fd5e53;
     color: #ffffff;
     font-size: 1.3em;
   }
@@ -451,46 +647,186 @@ body {
   section {
     width: 100%;
     margin: 50px auto;
-    height: auto;
+    margin-top: 50px;
     background-color: #f2f3f7;
     padding: 30px;
     border-radius: 400px 0px 0px 0px;
   }
-  section #covid-cases {
+  section #covid-updates {
+    width: 100%;
     margin: 0 auto;
     padding: 20px;
-    width: inherit;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  section #covid-cases .update {
+  section #covid-updates .update {
     color: #243941;
     font-weight: bold;
     text-align: center;
+    margin-top: 30px;
   }
-  section #covid-cases .update span {
+  section #covid-updates .update span {
     color: limegreen;
   }
-  section #covid-cases .map-image {
+  section #covid-updates .map-image {
     width: 300px;
-    height: 150px;
-    margin: 30px auto;
+    margin-top: 30px;
     display: block;
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
   }
-  section #covid-cases .covid-data {
+  section #covid-updates .covid-data {
     margin-top: 40px;
   }
-  section #covid-cases .covid-data p {
+  section #covid-updates .covid-data p {
     text-align: center;
     font-weight: bold;
   }
-  section #covid-cases .covid-data .existing .existing-number, section #covid-cases .covid-data .confirmed .confirmed-number, section #covid-cases .covid-data .recovered .recovered-number, section #covid-cases .covid-data .deaths .death-number {
+  section #covid-updates .covid-data .existing .existing-number, section #covid-updates .covid-data .confirmed .confirmed-number, section #covid-updates .covid-data .recovered .recovered-number, section #covid-updates .covid-data .deaths .death-number {
     font-size: 1.5em;
-    color: #D33E49;
+    color: #fd5e53;
   }
-  section #covid-cases .covid-data .recovered .recovered-number {
+  section #covid-updates .covid-data .recovered .recovered-number {
     color: limegreen;
+  }
+  #contagion {
+    width: 90%;
+    margin: 30px auto;
+  }
+  #contagion .wrapper {
+    width: 95%;
+    margin: 30px auto;
+  }
+  #contagion .wrapper h1 {
+    text-align: center;
+    color: #fd5e53;
+  }
+  #contagion .wrapper p {
+    color: #243941;
+    text-align: center;
+    margin: 30px;
+    line-height: 30px;
+  }
+  #contagion .image-container {
+    margin: 60px auto;
+    min-width: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 15px 15px;
+    border-radius: 30px 30px 30px 30px;
+    overflow-x: auto;
+    background-color: #f2f3f7;
+    -webkit-box-shadow: -3px -20px 15px 3px #f2f3f7, -3px -20px 15px 3px #f2f3f777;
+            box-shadow: -3px -20px 15px 3px #f2f3f7, -3px -20px 15px 3px #f2f3f777;
+  }
+  #contagion .image-container::-webkit-scrollbar {
+    width: 0;
+  }
+  .caption-style, .heading-style, .points {
+    color: #fd5e53;
+    text-align: center;
+    font-size: 1.5em;
+  }
+  .points {
+    font-size: 2.5em;
+  }
+  .heading-style {
+    font-size: 3em;
+  }
+  .box-style {
+    min-width: 250px;
+    border: 2px solid #ffffff;
+    background-color: #ffffff;
+    border-radius: 20px 20px 20px 20px;
+    margin-bottom: 30px;
+    margin-right: 10px;
+  }
+  .image-style {
+    background-position: center;
+    background-position: 100%;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+    margin: 10px auto;
+    display: block;
+  }
+  .text-style {
+    color: #243941;
+    line-height: 30px;
+    text-align: center;
+    padding: 30px;
+  }
+  #symptoms {
+    margin: 30px auto;
+    width: 90%;
+  }
+  #symptoms .symptoms-image {
+    margin: 30px auto;
+    display: block;
+    width: 300px;
+    height: 300px;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  #symptoms ul {
+    margin-top: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #symptoms ul li {
+    margin-bottom: 20px;
+    color: #fd5e53;
+    font-weight: bold;
+  }
+  .image-size-mobile {
+    width: 300px;
+    height: 300px;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin: 30px auto;
+    display: block;
+  }
+  .number, .number-padding {
+    background-color: #fcdef0;
+    padding: 15px 20px;
+    border-radius: 50%;
+  }
+  .number-padding {
+    padding: 10px 15px;
+  }
+  #prevention-mobile {
+    width: 90%;
+    margin: 30px auto;
+  }
+  #prevention-mobile .prevention-mobile-wrapper {
+    width: 90%;
+    margin: 30px auto;
+  }
+  #prevention-desktop {
+    display: none;
   }
 }
 
@@ -498,10 +834,14 @@ body {
   main .content #about .image-phone {
     width: 250px;
   }
-  section #covid-cases {
-    width: 90%;
+  section {
+    width: 100%;
   }
-  section #covid-cases .map-image {
+  section #covid-updates {
+    width: 100%;
+  }
+  section #covid-updates .map-image {
+    margin-top: 30px;
     width: 250px;
     height: 100px;
   }
@@ -511,39 +851,16 @@ body {
   main .content #about .image-phone {
     width: 200px;
   }
-  section #covid-cases {
+  section #covid-updates {
     width: 90%;
   }
-  section #covid-cases .map-image {
+  section #covid-updates .map-image {
     width: 200px;
     height: 100px;
   }
-}
-
-@media (min-width: 1000px) and (max-width: 1024px) {
-  .call-btn {
-    position: fixed;
-    bottom: 5%;
-    right: 5%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    background-color: #D33E49;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-  }
-  .call-btn a {
-    text-decoration: none;
-    border: 2px solid #D33E49;
-    color: #ffffff;
-    font-size: 1.5em;
+  #symptoms .symptoms-image {
+    width: 200px;
+    height: 200px;
   }
 }
 
@@ -561,19 +878,77 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    background-color: #D33E49;
+    background-color: #fd5e53;
     width: 80px;
     height: 80px;
     border-radius: 50%;
   }
   .call-btn a {
     text-decoration: none;
-    border: 2px solid #D33E49;
+    border: 2px solid #fd5e53;
     color: #ffffff;
     font-size: 1.5em;
   }
   section {
     border-radius: 800px 0px 0px 0px;
   }
+}
+
+@media (min-width: 1000px) and (max-width: 1024px) {
+  .call-btn {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #fd5e53;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  .call-btn a {
+    text-decoration: none;
+    border: 2px solid #fd5e53;
+    color: #ffffff;
+    font-size: 1.5em;
+  }
+  #contagion .image-container {
+    width: 95%;
+  }
+  .box-style {
+    margin-right: 10px;
+  }
+}
+
+footer {
+  margin-top: 30px;
+  width: 100%;
+  height: 20%;
+  background-color: #f2f3f7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer p {
+  color: #243941;
+  font-weight: bold;
+}
+
+footer p span {
+  color: #fd5e53;
 }
 /*# sourceMappingURL=style.css.map */

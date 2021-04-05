@@ -3,31 +3,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon type = image/jpg" sizes = "32x32" href="./assets/images/virus.jpg">
     <link rel="stylesheet" href="./assets/styles/style.css">
     <link rel="stylesheet" href="./FONTAWESOME/all.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet">
     <title>covidTRACKER</title>
 </head>
 <body>
+    <div class="preloader">
+        <h1>covidTRACKER</h1>
+    </div>
     <!--Menu List for smaller screens(smartphones)-->
-        <ul class="sideMenu">
-            <li><a href="#about">About</a></li>
-            <li><a href="#covid-cases">Cases</a></li>
-            <li><a href="">Contagion</a></li>
-            <li><a href="">Symptoms</a></li>
-            <li><a href="">Prevention</a></li>
-            <li><a class="contact-for-mobile" href="tel: +233 50 949 7700">Contact <i class="fas fa-phone"></i></a></li>
-        </ul>
+            <aside class="SideMenu">
+                <ul class="menu">
+                    <li class="sideMenuAbout"><a href="#about">About</a></li>
+                    <li class="sideMenuUpdates"><a href="#covid-updates">Updates</a></li>
+                    <li class="sideMenuContagion"><a href="#contagion">Contagion</a></li>
+                    <li class="sideMenuSymptoms"><a href="#symptoms">Symptoms</a></li>
+                    <li class="sideMenuPrevention"><a href="#prevention-mobile">Prevention</a></li>
+                    <li class="sideMenuContact"><a class="contact-for-mobile" href="tel: +233 50 949 7700">Contact <i class="fas fa-phone"></i></a></li>
+                </ul>
+            </aside>
     <header>
-        <a href="" class="logo"><img src="./assets/images/IMG_0590-removebg-preview.png" alt=""></a>
         <a href="" class="covid"><span>covid</span>TRACKER</a>
         <!--Menu List for Desktop-->
         <ul class="menuList">
             <li><a href="#about">About</a></li>
-            <li><a href="#covid-cases">Cases</a></li>
-            <li><a href="">Contagion</a></li>
-            <li><a href="">Symptoms</a></li>
-            <li><a href="">Prevention</a></li>
+            <li><a href="#covid-updates">Updates</a></li>
+            <li><a href="#contagion">Contagion</a></li>
+            <li><a href="#symptoms">Symptoms</a></li>
+            <li><a href="#prevention-desktop">Prevention</a></li>
             <li><a class="pinkContact" href="https://www.ghanahealthservice.org/covid19/">Contact <i class="fas fa-phone"></i></a></li>
         </ul>
         <!--menu button for mobile-->
@@ -36,6 +41,7 @@
             <div></div>
         </div>
     </header>
+    <!--This main section gives background information about the covid-19-->
     <main>
         <div class="content">
             <div id="about">
@@ -53,11 +59,14 @@
             </div>
         </div>
     </main>
+    <!--Call button for Ghana Health Service Covid-19 helpline-->
     <div class="call-btn">
         <a href="tel:+233 55 843 9868"><i class="fas fa-phone"></i></a>
     </div>
+    <!--This section displays and tracks the Covid-19 cases around the world-->
     <section>
-        <div id="covid-cases">
+        <div id="covid-updates">
+           <h1 class="heading-style">Updates</h1>
            <p class="update">Last updated at <span class = "time"></span> on <span class="date"></span></p>
             <img class="map-image" src="./assets/images/IMG_0589-removebg-preview.png" alt="covid-cases covid19 Covid-19 covidTRACKER">
             <div class="covid-data">
@@ -80,8 +89,125 @@
             </div>
         </div>
     </section>
+    <!--This Contagion section displays the things that could spread the virus-->
+    <div id="contagion">
+        <div class="wrapper">
+            <h1 class="heading-style">Contagion</h1>
+            <p>People who are infected often have symptoms of illness. Some people without symptoms may be able to spread virus.</p>
+        </div>
+        <div class="image-container">
+            <div class="box-style">
+                <img class = "image-style" src="./assets/images/air-borne.jpg" alt="COVID-19 contagion air-borne">
+                <h1 class="caption-style">Air Transmission</h1>
+                <p class = "text-style">Use a tissue while sneezing to prevent your droplets from contaminating nearby objects or settling on people nearby.</p>
+            </div>
+            <div class="box-style">
+                <img class = "image-style" src="./assets/images/contact.jpg" alt="COVID-19 contagion air-borne">
+                <h1 class="caption-style">Human Contact</h1>
+                <p class = "text-style">Avoid touching people. Also, washing your hands is the simplest way you can protect yourself.</p>
+            </div>
+            <div class="box-style">
+                <img class = "image-style" src="./assets/images/3605576.jpg" alt="COVID-19 contagion air-borne">
+                <h1 class="caption-style">Contaminated Objects</h1>
+                <p class = "text-style">Use a tissue while sneezing to prevent your droplets from contaminating nearby objects.</p>
+            </div>
+        </div>
+    </div>
+    <!--The symptoms section displays the symptoms of the virus-->
+    <div id="symptoms">
+        <div class="wrapper">
+            <h1 class = "heading-style">Symptoms</h1>
+            <p class="text-style">People with COVID-19 have had a wide range of symptoms reported; ranging from mild symptoms to severe illness.</p>
+        </div>
+        <div class="symptoms-wrapper">
+            <img class="symptoms-image" src="./assets/images/symptoms.jpg" alt="COVID-19 symptoms Coronavirus">
+            <ul>
+                <li>Headache</li>
+                <li>Fever</li>
+                <li>Throat pain</li>
+                <li>Runny nose</li>
+                <li>Dypsnoea</li>
+                <li>Shaking chills</li>
+            </ul>
+        </div>
+    </div>
+
+    <!--This prevention id ONLY displays on DESKTOP // Displays virus prevention mechanisms-->
+    <div id="prevention-desktop">
+        <div class="wrapper">
+            <h1 class="heading-style">Prevention</h1>
+            <p class="text-style">A vaccine has been developed to help in the prevention of COVID-19. The best way to prevent illness is to be vaccinated and to avoid being exposed to this virus.</p>
+        </div>
+       <div class="prevention-container">
+            <div class="align-content">
+                <div class="align-text-and-number">
+                    <h1 class="points"><span class="number">01</span> Vaccination</h1>
+                </div>
+                <p class="text-style-form">Vaccines save millions of lives each year. Vaccines work by training and preparing the body’s natural defences – the immune system – to recognize and fight off the viruses and bacteria they target. After vaccination, if the body is later exposed to those disease-causing germs, the body is immediately ready to destroy them, preventing illness.</p>
+            </div>
+            <img class="image-size" src="./assets/images/vaccine.jpg" alt="nose mask social-distancing prevention">
+        </div>
+        <div class="prevention-container">
+            <img class="image-size" src="./assets/images/undraw_social_distancing_2g0u-removebg-preview.png" alt="wash hands Coronavirus covid19 prevention">
+            <div class="align-content">
+                <div class="align-text-and-number">
+                    <h1 class="points"><span class="number">02</span> Wear nose mask</h1>
+                </div>
+                <p class="text-style-form">Everyone should wear a cloth face cover when they have to go out in public, for example to the grocery store or to pick up other necessities. Cloth face coverings should not be placed on young children under age 2, anyone who has trouble breathing, or is unconscious, incapacitated or otherwise unable to remove the mask without assistance. The cloth face cover is meant to protect other people in case you are infected. Do NOT use a facemask meant for a healthcare worker.</p>
+            </div>
+        </div>
+        <div class="prevention-container">
+            <div class="align-content">
+                <div class="align-text-and-number">
+                    <h1 class="points"><span class="number">03</span> Social Distance</h1>
+                </div>
+                <p class="text-style-form">What is social distancing? The practice of social distancing means staying home and away from others as much as possible to help prevent spread of COVID-19. The practice of social distancing encourages the use of things such as online video and phone communication instead of in-person contact.</p>
+            </div>
+            <img class="image-size" src="./assets/images/social-distancing.jpg" alt="social-distancing social-distance prevention Covid-19">
+        </div>
+        <div class="prevention-container">
+            <img class="image-size" src="./assets/images/washing of hands.jpg" alt="nose mask social-distancing prevention">
+            <div class="align-content">
+                <div class="align-text-and-number">
+                    <h1 class="points"><span class="number">04</span> Wash your hands</h1>
+                </div>
+                <p class="text-style-form">Wash your hands often with soap and water for at least 20 seconds especially after you have been in a public place, or after blowing your nose, coughing, or sneezing. If soap and water are not readily available, use a hand sanitizer that contains at least 60% alcohol. Cover all surfaces of your hands and rub them together until they feel dry. Avoid touching your eyes, nose, and mouth with unwashed hands.</p>
+            </div>
+    </div>
+    </div>
+
+   <!--This Prevention id ONLY displays on MOBILE // Displays virus prevention mechanisms-->
+   <div id="prevention-mobile">
+        <h1 class="heading-style">Prevention</h1>
+        <p class="text-style">A vaccine has been developed to help in the prevention of COVID-19. The best way to prevent illness is to be vaccinated or to avoid being exposed to this virus.</p>
+        <div class="prevention-mobile-wrapper">
+            <h1 class="caption-style"><span class="number-padding">01</span> Vaccination</h1>
+            <img class="image-size-mobile" src="./assets/images/vaccine.jpg" alt="vaccine vaccination social-distancing prevention">
+            <p class="text-style">Vaccines save millions of lives each year. Vaccines work by training and preparing the body’s natural defences – the immune system – to recognize and fight off the viruses and bacteria they target. After vaccination, if the body is later exposed to those disease-causing germs, the body is immediately ready to destroy them, preventing illness.</p>
+        </div>
+        <div class="prevention-mobile-wrapper">
+            <h1 class="caption-style"><span class="number-padding">02</span> Wear nose mask</h1>
+            <img class="image-size-mobile" src="./assets/images/undraw_social_distancing_2g0u-removebg-preview.png" alt="nose mask social-distancing prevention">
+            <p class="text-style">Everyone should wear a cloth face cover when they have to go out in public, for example to the grocery store or to pick up other necessities. Cloth face coverings should not be placed on young children under age 2, anyone who has trouble breathing, or is unconscious, incapacitated or otherwise unable to remove the mask without assistance. The cloth face cover is meant to protect other people in case you are infected. Do NOT use a facemask meant for a healthcare worker.</p>
+        </div>
+        <div class="prevention-mobile-wrapper">
+            <h1 class="caption-style"><span class="number-padding">03</span> Social Distance</h1>
+            <img class="image-size-mobile" src="./assets/images/social-distancing.jpg" alt="social distance social-distancing prevention">
+            <p class="text-style">What is social distancing? The practice of social distancing means staying home and away from others as much as possible to help prevent spread of COVID-19. The practice of social distancing encourages the use of things such as online video and phone communication instead of in-person contact.</p>
+        </div>
+        <div class="prevention-mobile-wrapper">
+            <h1 class="caption-style"><span class="number-padding">04</span> Wash your hands</h1>
+            <img class="image-size-mobile" src="./assets/images/washing of hands.jpg" alt="washing hands social-distancing prevention">
+            <p class="text-style">Wash your hands often with soap and water for at least 20 seconds especially after you have been in a public place, or after blowing your nose, coughing, or sneezing. If soap and water are not readily available, use a hand sanitizer that contains at least 60% alcohol. Cover all surfaces of your hands and rub them together until they feel dry. Avoid touching your eyes, nose, and mouth with unwashed hands.</p>
+        </div>
+   </div>
+   <footer>
+           <p>&copy;2021 Created by Samuel Osei with <span>&#10084</span></p>
+   </footer>
 
 
-<script src="./main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+    <script src="./main.js"></script>
 </body>
 </html>
