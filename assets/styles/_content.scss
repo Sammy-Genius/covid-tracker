@@ -475,6 +475,12 @@
 
        .image-container::-webkit-scrollbar {
            width:0;
+           display:none;
+       }
+
+       .image-container {
+           -ms-overflow-style:none;
+           scrollbar-width:none;
        }
     }
 

@@ -734,6 +734,11 @@ body {
   }
   #contagion .image-container::-webkit-scrollbar {
     width: 0;
+    display: none;
+  }
+  #contagion .image-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
   .caption-style, .heading-style, .points {
     color: #fd5e53;
