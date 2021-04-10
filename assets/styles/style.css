@@ -345,8 +345,8 @@ body {
     transition: all .2s ease-in-out;
     color: #ffffff;
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.75);
   }
   main .content #about h3 a:hover {
     background-color: #ffffff;
@@ -966,6 +966,7 @@ body {
   }
   section {
     width: 100%;
+    margin: 0 auto;
   }
   section #covid-updates {
     width: 100%;
