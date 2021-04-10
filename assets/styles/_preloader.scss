@@ -19,11 +19,11 @@
     }
 
     @keyframes animate {
-        from {
+        0% {
             stroke-dasharray: 0 50%;
             stroke-dashoffset: -20%;
         }
-        to {
+        100% {
             stroke-dasharray: 50% 0;
             stroke-dashoffset: -20%;
         }

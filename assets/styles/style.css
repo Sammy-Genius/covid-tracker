@@ -41,22 +41,22 @@ body {
 }
 
 @-webkit-keyframes animate {
-  from {
+  0% {
     stroke-dasharray: 0 50%;
     stroke-dashoffset: -20%;
   }
-  to {
+  100% {
     stroke-dasharray: 50% 0;
     stroke-dashoffset: -20%;
   }
 }
 
 @keyframes animate {
-  from {
+  0% {
     stroke-dasharray: 0 50%;
     stroke-dashoffset: -20%;
   }
-  to {
+  100% {
     stroke-dasharray: 50% 0;
     stroke-dashoffset: -20%;
   }
@@ -774,7 +774,7 @@ body {
     height: 40px;
   }
   section #covid-updates .search-wrapper .search-box {
-    width: 230px;
+    width: 250px;
     height: 40px;
     background-color: #ffffff;
     margin: 60px auto;
@@ -790,6 +790,8 @@ body {
             align-items: center;
   }
   section #covid-updates .search-wrapper .search-box .search {
+    width: 250px;
+    height: 40px;
     border: none;
     background: none;
     outline: none;
@@ -798,6 +800,7 @@ body {
             appearance: none;
     text-align: center;
     color: #243941;
+    font-size: 16px;
   }
   section #covid-updates .search-wrapper .btn {
     background-color: #fd5e53;

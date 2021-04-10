@@ -467,7 +467,7 @@
                 height:40px;
   
                 .search-box {
-                  width:230px;
+                  width:250px;
                   height:40px;
                   background-color:$white;
                   margin:60px auto;
@@ -477,12 +477,15 @@
                   align-items:center;
   
                   .search {
+                      width:250px;
+                      height:40px;
                       border:none;
                       background:none;
                       outline:none;
                       appearance: none;
                       text-align:center;
                       color:$blue;
+                      font-size: 16px;
                   }   
               }
   
