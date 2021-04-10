@@ -7,11 +7,16 @@
     <link rel="stylesheet" href="./assets/styles/style.css">
     <link rel="stylesheet" href="./FONTAWESOME/all.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>covidTRACKER</title>
 </head>
 <body>
     <div class="preloader">
-        <h1>covidTRACKER</h1>
+        <svg viewBox="0 0 1350 600">
+            <text x="50%" y="50%" fill="transparent" text-anchor="middle">
+                covidTRACKER
+            </text>
+        </svg>
     </div>
     <!--Menu List for smaller screens(smartphones)-->
             <aside class="SideMenu">
@@ -66,25 +71,28 @@
     <!--This section displays and tracks the Covid-19 cases around the world-->
     <section>
         <div id="covid-updates">
-           <h1 class="heading-style">Updates</h1>
-           <p class="update">Last updated at <span class = "time"></span> on <span class="date"></span></p>
+            <h1 class="heading-style">Updates</h1>
+            <p class="update">Last updated at <span class = "time"></span> on <span class="date"></span></p>
+            <div class="search-wrapper">
+                <div class="search-box">
+                    <input type="text" class="search" placeholder="search country">
+                </div>
+                <span class="btn"><i class="fas fa-search"></i></span>
+                <span class="btn refresh"><i class="fas fa-redo-alt"></i></span>
+            </div>
             <img class="map-image" src="./assets/images/IMG_0589-removebg-preview.png" alt="covid-cases covid19 Covid-19 covidTRACKER">
             <div class="covid-data">
-                <div class="existing spacing">
-                    <p class="existing-number"></p>
-                    <p>Existing Cases</p>
-                </div>
                 <div class="confirmed spacing">
                     <p class="confirmed-number"></p>
-                    <p>Confirmed Cases</p>
+                    <p class = "confirmedText"></p>
                 </div>
                 <div class="recovered spacing">
                     <p class="recovered-number"></p>
-                    <p>Recovered Cases</p>
+                    <p class="recoveredText"></p>
                 </div>
                 <div class="deaths spacing">
                     <p class="death-number"></p>
-                    <p>Worldwide Deaths</p>
+                    <p class="deathText"></p>
                 </div>
             </div>
         </div>

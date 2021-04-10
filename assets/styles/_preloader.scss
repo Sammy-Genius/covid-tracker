@@ -1,5 +1,5 @@
 .preloader {
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     width:100%;
@@ -10,9 +10,23 @@
     z-index:5000;
     pointer-events: none;
 
-    h1 {
-        color:$white;
-        font-size:2.5em;
+    svg text {
+        stroke:#f2f3f7;
+        stroke-width:5;
+        font-size:3.5em;
+        font-weight: bold;
+        animation: animate 5s alternate infinite;
+    }
+
+    @keyframes animate {
+        from {
+            stroke-dasharray: 0 50%;
+            stroke-dashoffset: -20%;
+        }
+        to {
+            stroke-dasharray: 50% 0;
+            stroke-dashoffset: -20%;
+        }
     }
 }
 

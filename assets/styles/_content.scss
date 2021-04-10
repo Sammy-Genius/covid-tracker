@@ -108,6 +108,52 @@
                 }
             }
 
+
+          .search-wrapper {
+              margin:60px auto;
+              display:flex;
+              justify-content: space-evenly;
+              align-items:center;
+              width:350px;
+              height:40px;
+
+              .search-box {
+                width:260px;
+                height:40px;
+                background-color:#f2f3f7;
+                margin:60px auto;
+                border-radius:20px;
+                display:flex;
+                justify-content: space-evenly;
+                align-items:center;
+
+                .search {
+                    border:none;
+                    background:none;
+                    outline:none;
+                    appearance: none;
+                    text-align:center;
+                    color:$blue;
+                }   
+            }
+
+            .btn {
+                background-color:$pink;
+                padding:10px 10px;
+                border-radius:50%;
+                margin-left:10px;
+
+                i {
+                    color:$white;
+
+                    &:hover {
+                        cursor: pointer;
+                        opacity:.7;
+                    }
+                }
+            }
+        }
+
             .map-image {
                 width:600px;
                 height:250px;
@@ -370,6 +416,7 @@
         width:50px;
         height:50px;
         border-radius:50%;
+        z-index:1200;
         
         a {
             text-decoration: none;
@@ -410,6 +457,51 @@
                     color:limegreen;
                 }
             }
+
+            .search-wrapper {
+                margin:60px auto;
+                display:flex;
+                justify-content: space-evenly;
+                align-items:center;
+                width:300px;
+                height:40px;
+  
+                .search-box {
+                  width:230px;
+                  height:40px;
+                  background-color:$white;
+                  margin:60px auto;
+                  border-radius:20px;
+                  display:flex;
+                  justify-content: space-evenly;
+                  align-items:center;
+  
+                  .search {
+                      border:none;
+                      background:none;
+                      outline:none;
+                      appearance: none;
+                      text-align:center;
+                      color:$blue;
+                  }   
+              }
+  
+              .btn {
+                  background-color:$pink;
+                  padding:10px 10px;
+                  border-radius:50%;
+                  margin-left:10px;
+  
+                  i {
+                      color:$white;
+  
+                      &:hover {
+                          cursor: pointer;
+                          opacity:.7;
+                      }
+                  }
+              }
+          }
 
             .map-image {
                 width:300px;
@@ -670,6 +762,7 @@
         width:100px;
         height:100px;
         border-radius:50%;
+        z-index:1200;
         
         a {
             text-decoration: none;

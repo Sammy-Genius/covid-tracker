@@ -31,9 +31,35 @@ body {
   pointer-events: none;
 }
 
-.preloader h1 {
-  color: #ffffff;
-  font-size: 2.5em;
+.preloader svg text {
+  stroke: #f2f3f7;
+  stroke-width: 5;
+  font-size: 3.5em;
+  font-weight: bold;
+  -webkit-animation: animate 5s alternate infinite;
+          animation: animate 5s alternate infinite;
+}
+
+@-webkit-keyframes animate {
+  from {
+    stroke-dasharray: 0 50%;
+    stroke-dashoffset: -20%;
+  }
+  to {
+    stroke-dasharray: 50% 0;
+    stroke-dashoffset: -20%;
+  }
+}
+
+@keyframes animate {
+  from {
+    stroke-dasharray: 0 50%;
+    stroke-dashoffset: -20%;
+  }
+  to {
+    stroke-dasharray: 50% 0;
+    stroke-dashoffset: -20%;
+  }
 }
 
 .disappear {
@@ -198,7 +224,7 @@ body {
     visibility: hidden;
     -webkit-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
-    z-index: 1000;
+    z-index: 1500;
   }
   .sideMenu .menu {
     display: -webkit-box;
@@ -384,6 +410,59 @@ body {
   }
   section #covid-updates .update span {
     color: limegreen;
+  }
+  section #covid-updates .search-wrapper {
+    margin: 60px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 350px;
+    height: 40px;
+  }
+  section #covid-updates .search-wrapper .search-box {
+    width: 260px;
+    height: 40px;
+    background-color: #f2f3f7;
+    margin: 60px auto;
+    border-radius: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section #covid-updates .search-wrapper .search-box .search {
+    border: none;
+    background: none;
+    outline: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    text-align: center;
+    color: #243941;
+  }
+  section #covid-updates .search-wrapper .btn {
+    background-color: #fd5e53;
+    padding: 10px 10px;
+    border-radius: 50%;
+    margin-left: 10px;
+  }
+  section #covid-updates .search-wrapper .btn i {
+    color: #ffffff;
+  }
+  section #covid-updates .search-wrapper .btn i:hover {
+    cursor: pointer;
+    opacity: .7;
   }
   section #covid-updates .map-image {
     width: 600px;
@@ -634,6 +713,7 @@ body {
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    z-index: 1200;
   }
   .call-btn a {
     text-decoration: none;
@@ -678,6 +758,59 @@ body {
   }
   section #covid-updates .update span {
     color: limegreen;
+  }
+  section #covid-updates .search-wrapper {
+    margin: 60px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 300px;
+    height: 40px;
+  }
+  section #covid-updates .search-wrapper .search-box {
+    width: 230px;
+    height: 40px;
+    background-color: #ffffff;
+    margin: 60px auto;
+    border-radius: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section #covid-updates .search-wrapper .search-box .search {
+    border: none;
+    background: none;
+    outline: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    text-align: center;
+    color: #243941;
+  }
+  section #covid-updates .search-wrapper .btn {
+    background-color: #fd5e53;
+    padding: 10px 10px;
+    border-radius: 50%;
+    margin-left: 10px;
+  }
+  section #covid-updates .search-wrapper .btn i {
+    color: #ffffff;
+  }
+  section #covid-updates .search-wrapper .btn i:hover {
+    cursor: pointer;
+    opacity: .7;
   }
   section #covid-updates .map-image {
     width: 300px;
@@ -917,6 +1050,7 @@ body {
     width: 100px;
     height: 100px;
     border-radius: 50%;
+    z-index: 1200;
   }
   .call-btn a {
     text-decoration: none;
