@@ -465,16 +465,18 @@
                 align-items:center;
                 width:300px;
                 height:40px;
+                border-radius: 50px;
   
                 .search-box {
                   width:250px;
                   height:40px;
-                  background-color:$white;
                   margin:60px auto;
                   border-radius:20px;
                   display:flex;
                   justify-content: space-evenly;
                   align-items:center;
+                  box-shadow:  20px 20px 60px #cecfd2,
+                            -20px -20px 60px #ffffff;
   
                   .search {
                       width:250px;

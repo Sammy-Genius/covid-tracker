@@ -747,11 +747,11 @@ body {
             align-items: center;
     width: 300px;
     height: 40px;
+    border-radius: 50px;
   }
   section #covid-updates .search-wrapper .search-box {
     width: 250px;
     height: 40px;
-    background-color: #ffffff;
     margin: 60px auto;
     border-radius: 20px;
     display: -webkit-box;
@@ -763,6 +763,8 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-shadow: 20px 20px 60px #cecfd2, -20px -20px 60px #ffffff;
+            box-shadow: 20px 20px 60px #cecfd2, -20px -20px 60px #ffffff;
   }
   section #covid-updates .search-wrapper .search-box .search {
     width: 250px;
