@@ -8,7 +8,7 @@ setTimeout(() => {
    tl.from("header", {opacity:0, x:50, duration:1, ease:Power2.easeInOut})
      .from("main", {opacity:0, y:50, duration:1, ease:Power2.easeInOut})
      .from("section", {opacity:0, y:50, duration:1, ease:Power2.easeInOut});
-}, 9000);
+}, 3000);
 
 
 

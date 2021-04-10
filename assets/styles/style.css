@@ -31,35 +31,9 @@ body {
   pointer-events: none;
 }
 
-.preloader svg text {
-  stroke: #f2f3f7;
-  stroke-width: 5;
-  font-size: 3.5em;
-  font-weight: bold;
-  -webkit-animation: animate 5s alternate infinite;
-          animation: animate 5s alternate infinite;
-}
-
-@-webkit-keyframes animate {
-  0% {
-    stroke-dasharray: 0 50%;
-    stroke-dashoffset: -20%;
-  }
-  100% {
-    stroke-dasharray: 50% 0;
-    stroke-dashoffset: -20%;
-  }
-}
-
-@keyframes animate {
-  0% {
-    stroke-dasharray: 0 50%;
-    stroke-dashoffset: -20%;
-  }
-  100% {
-    stroke-dasharray: 50% 0;
-    stroke-dashoffset: -20%;
-  }
+.preloader h1 {
+  font-size: 3em;
+  color: #f2f3f7;
 }
 
 .disappear {
