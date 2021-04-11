@@ -771,7 +771,7 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    background-color: #fd5e53;
+    background-color: limegreen;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -782,7 +782,6 @@ body {
   }
   .call-btn a {
     text-decoration: none;
-    border: 2px solid #fd5e53;
     color: #ffffff;
     font-size: 1.3em;
   }
@@ -1120,7 +1119,7 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    background-color: #fd5e53;
+    background-color: limegreen;
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -1131,7 +1130,6 @@ body {
   }
   .call-btn a {
     text-decoration: none;
-    border: 2px solid #fd5e53;
     color: #ffffff;
     font-size: 1.5em;
   }
