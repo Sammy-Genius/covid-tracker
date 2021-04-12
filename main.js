@@ -1,7 +1,7 @@
 const tl = gsap.timeline();
 
-//screen preloader for mobile
-const preloader = document.querySelector("#mobile-preloader");
+//screen preloader
+const preloader = document.querySelector(".preloader");
 
 setTimeout(() => {
    preloader.classList.toggle("disappear");
@@ -9,19 +9,6 @@ setTimeout(() => {
      .from("main", {opacity:0, y:50, duration:1, ease:Power2.easeInOut})
      .from("section", {opacity:0, y:50, duration:1, ease:Power2.easeInOut});
 }, 3000);
-
-//screen preloader for desktop
-const preloaderDesktop = document.querySelector("#desktop-preloader");
-
-setTimeout(() => {
-   preloaderDesktop.classList.toggle("disappear");
-   tl.from("header", {opacity:0, x:50, duration:1, ease:Power2.easeInOut})
-     .from("main", {opacity:0, y:50, duration:1, ease:Power2.easeInOut})
-     .from("section", {opacity:0, y:50, duration:1, ease:Power2.easeInOut});
-}, 9000);
-
-
-
 
 
 //this line of code opens and collapses the mobile side menu

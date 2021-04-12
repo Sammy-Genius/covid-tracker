@@ -1,64 +1,3 @@
-//preloder for desktop 
-@media screen and (min-width:769px) {
-    #mobile-preloader {
-        display:none;
-    }
-
-    .preloader {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width:100%;
-        height:100%;
-        position:fixed;
-        top:0;
-        background-color:#EE4855;
-        z-index:5000;
-        pointer-events: none;
-    
-        svg text {
-            stroke:#f2f3f7;
-            stroke-width:5;
-            font-size:3.5em;
-            font-weight: bold;
-            animation: animate 5s alternate infinite;
-        }
-    
-        @keyframes animate {
-            0% {
-                stroke-dasharray: 0 50%;
-                stroke-dashoffset: -20%;
-            }
-            100% {
-                stroke-dasharray: 50% 0;
-                stroke-dashoffset: -20%;
-            }
-        }
-    }
-
-    .disappear {
-        animation: vanish 1s ease-out forwards;
-    }
-    
-    @keyframes vanish {
-        50% {
-            transform: translateY(-100%);
-        }
-        100% {
-            opacity:0;
-            transform: translateY(-200%);
-            display:none;
-        }
-    }
-
-}
-
-//preloader for mobile
-@media screen and (max-width:768px) {
-    #desktop-preloader {
-        display:none;
-    }
-    
     .preloader {
         display: flex;
         justify-content: center;
@@ -92,4 +31,3 @@
             display:none;
         }
     }
-}
