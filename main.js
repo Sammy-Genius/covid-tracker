@@ -72,8 +72,8 @@ const urlTimeAndDate = 'https://mazitekgh.com/covid19/v1/',
   
   
       }catch {
-              timeT.innerHTML = "404 error. Network problem";
-              dateD.innerHTML =  "404 error. Network problem";
+              timeT.innerHTML = "Network problem";
+              dateD.innerHTML =  "Network problem";
       }
   }
   
@@ -99,6 +99,8 @@ async function getCovidAPI() {
               confirmedNumber = data.confirmed.value,
               recoveredNumber = data.recovered.value,
               deathNumber = data.deaths.value;  
+
+              console.log(recoveredNumber);
           
 
               confirmedText.innerHTML = 'Confirmed Cases';
@@ -111,9 +113,9 @@ async function getCovidAPI() {
 
 
     }catch {
-             confirmedCases.innerHTML =  "404 error";
-             recoveredCases.innerHTML =  "404 error";
-             deathCases.innerHTML =  "404 error";
+             confirmedCases.innerHTML =  "no data available";
+             recoveredCases.innerHTML =  "no data available";
+             deathCases.innerHTML =  "no data available";
              confirmedText.innerHTML = 'Network problem. Try again';
              recoveredText.innerHTML = 'Network problem. Try again';
              deathText.innerHTML = 'Network problem. Try again';
@@ -149,9 +151,9 @@ btn.addEventListener("click", () => {
                                   
         }catch {
          tl.from('.covid-data', {opacity:0, y:-50, stagger:.5, ease:Power2.easeInOut});
-         confirmedCases.innerHTML = '404 error';
-         recoveredCases.innerHTML = '404 error';
-         deathCases.innerHTML = '404 error';  
+         confirmedCases.innerHTML = 'no data available';
+         recoveredCases.innerHTML = 'no data available';
+         deathCases.innerHTML = 'no data available';  
          confirmedText.innerHTML = `Country name invalid or Network problem. Try again`;
          recoveredText.innerHTML = `Country name invalid or Network problem. Try again`;
          deathText.innerHTML = `Country name invalid or Network problem. Try again`;
